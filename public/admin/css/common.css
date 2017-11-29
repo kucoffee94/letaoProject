@@ -127,3 +127,16 @@ text-decoration: none;
     height: 100%;
     
 }
+
+/* 首页的EChars */
+.breadcrumb{
+    margin-bottom: 30px;
+}
+.lt_main_left,.lt_main_right{
+    width: 45%;
+    height: 400px;
+}
+.lt_main_bar,.lt_main_pie{
+    width: 100%;
+    height: 400px;
+}

@@ -49,11 +49,7 @@ $(function(){
             data:form.serialize(),
             success:function(data){
                 if(data.success){
-<<<<<<< HEAD
                     location.href = 'index.html';
-=======
-                    location.href= 'index.html';
->>>>>>> index
                 }
                 if( data.error == 1000 ){
                   form.data('bootstrapValidator').updateStatus('username','INVALID','callback');
