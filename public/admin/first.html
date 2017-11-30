@@ -61,14 +61,30 @@
         <div class="lt_main_content">
             <div class="container-fluid">
                 <ol class="breadcrumb">
-                    <li><a href="#">管理系统</a></li>
+                    <li><a href="index.html">管理系统</a></li>
                     <li><a href="#">分类管理</a></li>
                     <li class="active">一级分类</li>
                 </ol>
+                <button class='btn btn-default mb_20 add_cate'>添加分类</button>
+                <div class="lt_main_table">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width='20%'>序号</td>
+                                <td width='80%'>分类名称</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 挖个坑 -->
+                        </tbody>
+                    </table>
+                    <div class="paginator text-right">
+                        <ul class="pagination"></ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
     <!-- 退出部分的模态框 -->
     <div class="modal fade" tabindex="-1">
@@ -80,8 +96,7 @@
                 </div>
                 <div class="modal-body">
                     <p class='text-danger'>
-                        <span class='glyphicon glyphicon-info-sign'></span>
-                        您确定要退出后台管理系统吗？
+                        <span class='glyphicon glyphicon-info-sign'></span> 您确定要退出后台管理系统吗？
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -91,13 +106,50 @@
             </div>
         </div>
     </div>
-   
 
-    <script src='./lib/jquery/jquery.js'></script>
-    <script src='./lib/bootstrap/js/bootstrap.js'></script>
-    <script src='./lib/bootstrap-validator/js/bootstrapValidator.js'></script>
-    <script src='./lib/nprogress/nprogress.js'></script>
-    <script src='./js/common.js'></script>
+    <!-- 一级分类添加分类的模态框 -->
+    <div class="modal fade cate_modal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content modal-sm">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" name='categoryName' class="form-control" id="add_category" placeholder="请输入一个一级分类">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary btn_addcate">添加</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 表格模板 -->
+    <script type='text/html' id='tpl'>
+        {{each rows v i}}
+            <tr>
+                <td>{{ (page-1)*size+i+1 }}</td>
+                <td>{{ v.categoryName }}</td>
+            </tr>
+        {{ /each }}
+    </script>
+
+
+    <script src='lib/jquery/jquery.js'></script>
+    <script src='lib/bootstrap/js/bootstrap.js'></script>
+    <script src='lib/bootstrap-validator/js/bootstrapValidator.js'></script>
+    <script src='lib/bootstrap-paginator/bootstrap-paginator.js'></script>
+    <script src='lib/artTemplate/template-web.js'></script>
+    <script src='lib/nprogress/nprogress.js'></script>
+    <script src='js/common.js'></script>
+    <script src='js/first.js'></script>
 
 
 </body>
