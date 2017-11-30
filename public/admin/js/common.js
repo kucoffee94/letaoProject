@@ -13,6 +13,21 @@ $(function () {
             NProgress.done();
         }, 5000);
     });
+// 登录的ajax判断
+if(location.href.indexOf('login.html') == -1){
+    $.ajax({
+        type:'get',
+        url:'/employee/employeeLogin',
+        success:function(data){
+            if(data.success){
+                location.href = 'login.html';
+            }
+        }
+    });
+}
+
+
+
     // 公共部分头部导航动画 
     $('.lt_main .glyphicon-align-justify').on('click',function(){
         $('.lt_aside').toggleClass('now');
@@ -39,18 +54,5 @@ $(function () {
             });
         });
     });
-
-
-
-
-    // 导航被点击以后的样式
-    // $(".lt_nav li>a").on('click',function(){
-        
-    //     $(this).add('now');
-
-    // });
-
-
-
 
 });
