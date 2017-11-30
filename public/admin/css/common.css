@@ -140,3 +140,11 @@ text-decoration: none;
     width: 100%;
     height: 400px;
 }
+
+
+
+/* 用户管理页面 */
+.table.table-bordered td {
+    text-align: center;
+    vertical-align: middle;
+}
