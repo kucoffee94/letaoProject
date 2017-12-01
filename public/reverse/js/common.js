@@ -40,21 +40,22 @@ $(function () {
 
   /*  退出登录模态框 */
   icon_logout.on('click', function () {
-    $('.modal').modal('show');
-  });
-  $('.btn_logout').on('click', function () {
-    // 隐藏模态框
-    $('.modal').modal('hide');
-    // 发送ajax请求
-    $.ajax({
-      type: 'get',
-      url: '/employee/employeeLogout',
-      success: function (data) {
-        if (data.success) {
-          location.href = 'login.html';
+    $('#logout_modal').modal('show');
+    $('.btn_logout').off().on('click', function () {
+      // 隐藏模态框
+      $('#logout_modal').modal('hide');
+      // 发送ajax请求
+      $.ajax({
+        type: 'get',
+        url: '/employee/employeeLogout',
+        success: function (data) {
+          if (data.success) {
+            location.href = 'login.html';
+          }
         }
-      }
+      });
     });
   });
+ 
 
 });

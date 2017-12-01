@@ -19,6 +19,9 @@ html,body{
 .mb_20{
   margin-bottom: 20px;
 }
+.mb_50{
+  margin-bottom: 50px;
+}
 /* 登录页面样式 */
 .bg_body{
   background: #222d32;
@@ -116,5 +119,20 @@ a:link,a:hover,a:visited,a:active{
 }
 .charts_bar,.charts_pics{
   height: 400px;
+}
+
+/* 用户管理页面表格样式 */
+.table{
+  text-align: center;
+  
+}
+.lt_mian_content .table td{
+  vertical-align: middle;
+}
+
+
+/* 分页的样式 */
+.paginator{
+  text-align: right;
 }
 
