@@ -4,16 +4,109 @@
   margin: 0;
   padding: 0;
   list-style: none;
+  box-sizing: border-box;
+}
+html,body{
+  width: 100%;
+  height: 100%;
 }
 .mt_150{
   margin-top: 150px;
 }
+.mb_30{
+  margin-bottom: 30px;
+}
+.mb_20{
+  margin-bottom: 20px;
+}
 /* 登录页面样式 */
 .bg_body{
   background: #222d32;
+}
+a:link,a:hover,a:visited,a:active{
+  text-decoration: none;
 }
 .panel h4{
   text-align: center;
   font-size: 24px;
   color: #fff;
 }
+
+/* 后台页面公共左侧固定导航部分 */
+.lt_aside{
+  height: 100%;
+  width: 180px;
+  background: #222d32;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: all 1s;
+}
+.lt_aside.now{
+  left: -180px;
+}
+
+.lt_aside>.lt_aside_top>a{
+  width: 180px;
+  height: 50px;
+  display: block;
+  text-align: center;
+  line-height: 50px;
+  background: #367fa9;
+  color: #fff;
+  font-size: 24px;
+}
+.lt_aside>.user_img{
+  width: 80px;
+  height: 80px;
+  display: block;
+  margin: 0 auto;
+  border-radius: 50%;
+}
+.lt_aside>p{
+  color: #fff;
+  text-align: center;
+  font-size: 16px;
+  line-height: 40px;
+}
+.lt_aside>ul a{
+  display: block;
+  padding-left: 30px;
+  line-height: 45px;
+  border: 3px solid transparent;
+  color: #ccc;
+}
+.lt_aside>ul>li a.now{
+  background: #000;
+  border-left-color: #367fa9;
+  color: #fff;
+}
+.lt_aside>ul>li .category>a{
+  display: block;
+  padding-left: 50px;
+}
+
+/* 后台页面公共右侧主体部分  */
+.lt_main{
+  padding-left: 180px;
+  width: 100%;
+  height: 100%;
+  transition: all 1s;
+}
+.lt_main.now{
+  padding-left: 0px;
+}
+.lt_main_top{
+  padding: 0 20px;
+  height: 50px;
+  background: #3c8dbc;
+}
+.lt_main_top a{
+  line-height: 50px;
+  font-size: 18px;
+  color: #fff;
+}
+.min_box{
+  padding: 0 10px;
+}
+

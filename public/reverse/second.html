@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>系统管理-首页</title>
+    <title>系统管理-二级分类</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
     <link rel="stylesheet" href="lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="css/common.css">
@@ -28,13 +28,13 @@
                 <span>用户管理</span>
             </a></li>
             <li>
-                <a class="categories" href="javascript:;">
+                <a class='categories' href="javascript:;" >
                     <span class='glyphicon glyphicon-list'></span>
                     <span>分类管理</span>
                 </a>
-                <div class="category" style="display:none;">
+                <div class="category" style="display:block;">
                     <a href="first.html">一级分类</a>
-                    <a href="second.html">二级分类</a>
+                    <a class='now' href="second.html">二级分类</a>
                 </div>
             </li>
             <li><a href="product.html">
@@ -54,7 +54,8 @@
         <div class="min_box">
             <ol class="breadcrumb">
                 <li><a href="index.html">管理系统</a></li>
-                <li class="active">首页</li>
+                <li><a href="javascript:;">分类管理</a></li>
+                <li class="active">二级分类</li>
             </ol>
             <!-- 主体内容部分 -->
             <div class="lt_mian_content">
@@ -92,8 +93,7 @@
     <script src='lib/jquery/jquery.min.js'></script>
     <script src='lib/bootstrap/js/bootstrap.min.js'></script>
     <script src='lib/nprogress/nprogress.js'></script>
-    <script src='js/common.js'></script>
-    <script src='js/index.js'></script>
+    <script src='js/common.js'></script></a>
 </body>
 
 </html>
