@@ -151,3 +151,22 @@ text-decoration: none;
     text-align: center;
     vertical-align: middle;
 }
+
+/* 二级分类菜单 添加分类部分*/
+.file_box{
+    width: 86px;
+    height:36px;
+    position: relative;
+}
+.file_box>btn{
+    width: 100%;
+    height: 100%;
+}
+.file_box>input{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    opacity: 0;
+}

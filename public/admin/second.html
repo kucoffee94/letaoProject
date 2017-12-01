@@ -38,7 +38,7 @@
                         分类管理    
                     </a>
                     <div class="cate" style='display:block;'>
-                        <a  href="first.html">一级菜单</a>
+                        <a href="first.html">一级菜单</a>
                         <a class='now' href="second.html">二级菜单</a>
                     </div>
                 </li>
@@ -61,14 +61,32 @@
         <div class="lt_main_content">
             <div class="container-fluid">
                 <ol class="breadcrumb">
-                    <li><a href="#">管理系统</a></li>
+                    <li><a href="index.html">管理系统</a></li>
                     <li><a href="#">分类管理</a></li>
                     <li class="active">二级分类</li>
                 </ol>
+                <button class='btn btn-default mb_20 add_cate'>添加分类</button>
+                <div class="lt_main_table">
+                    <table class="table table-bordered table-hover">
+                        <thead>
+                            <tr>
+                                <td width='10%'>序号</td>
+                                <td width='30%'>一级分类名称</td>
+                                <td width='30%'>二级分类名称</td>
+                                <td width='30%'>二级分类LOGO</td>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <!-- 挖个坑 -->
+                        </tbody>
+                    </table>
+                    <div class="paginator text-right">
+                        <ul class="pagination"></ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
 
     <!-- 退出部分的模态框 -->
     <div class="modal fade" tabindex="-1">
@@ -80,8 +98,7 @@
                 </div>
                 <div class="modal-body">
                     <p class='text-danger'>
-                        <span class='glyphicon glyphicon-info-sign'></span>
-                        您确定要退出后台管理系统吗？
+                        <span class='glyphicon glyphicon-info-sign'></span> 您确定要退出后台管理系统吗？
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -91,13 +108,83 @@
             </div>
         </div>
     </div>
-   
 
-    <script src='./lib/jquery/jquery.js'></script>
-    <script src='./lib/bootstrap/js/bootstrap.js'></script>
-    <script src='./lib/bootstrap-validator/js/bootstrapValidator.js'></script>
-    <script src='./lib/nprogress/nprogress.js'></script>
-    <script src='./js/common.js'></script>
+    <!-- 二级分类添加分类的模态框 -->
+    <div class="modal fade cate_modal2" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content modal-sm">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal"><span>&times;</span></button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <div class="dropdown">
+                                <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown">
+                                    <span class='dropdown_text'>请选择一级分类</span>
+                                    <span class="caret"></span>
+                                </button>
+                                <input type="hidden" class='cate_id' name='categoryId'>
+                                <ul class="dropdown-menu">
+                                    <!-- 挖一个坑 -->
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" name='brandName' autocomplete='off' class="form-control" id="add_category" placeholder="请输入二级分类名称">
+                        </div>
+                        <div class="form-group">
+                            <div class='file_box'>
+                                <button class='btn btn-default'>上传图片</button>
+                                <input type="file" name='pic1' id='file_up' data-url="/category/addSecondCategoryPic">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="img_box">
+                                <img src="./images/none.png" width='100' height='100' alt="">
+                                <input type="hidden" name='brandLogo'>
+                            </div>
+                            <input type="hidden" name='hot' value='1'>
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary btn_addcate">添加</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- 表格模板 -->
+    <script type='text/html' id='tpl'>
+        {{ each rows v i}}
+        <tr>
+            <td>{{ (page-1)*size+i+1 }}</td>
+            <td>{{ v.categoryName }}</td>
+            <td>{{ v.brandName }}</td>
+            <td><img src="{{ v.brandLogo ? v.brandLogo : 'images/none.png'}}" width='40px' height='40px' alt=""></td>
+        </tr>
+        {{ /each }}
+    </script>
+    <script type='text/html' id='tpl1'>
+        {{ each rows v i}}
+        <li><a data-id='{{ v.id }}' href="javascript:;">{{ v.categoryName }}</a></li>
+        {{ /each}}
+    </script>
+
+    <script src='lib/jquery/jquery.js'></script>
+    <script src='lib/jquery-fileupload/jquery.ui.widget.js'></script>
+    <script src='lib/jquery-fileupload/jquery.fileupload.js'></script>
+    <script src='lib/bootstrap/js/bootstrap.js'></script>
+    <script src='lib/bootstrap-validator/js/bootstrapValidator.js'></script>
+    <script src='lib/bootstrap-paginator/bootstrap-paginator.js'></script>
+    <script src='lib/artTemplate/template-web.js'></script>
+    <script src='lib/nprogress/nprogress.js'></script>
+    <script src='js/common.js'></script>
+    <script src='js/second.js'></script>
 
 
 </body>
