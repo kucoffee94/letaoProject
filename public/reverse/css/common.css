@@ -109,4 +109,12 @@ a:link,a:hover,a:visited,a:active{
 .min_box{
   padding: 0 10px;
 }
+/* 首页图表 */
+.charts_left,.charts_right{
+  width: 45%;
+  height:400px;
+}
+.charts_bar,.charts_pics{
+  height: 400px;
+}
 

@@ -52,13 +52,18 @@
             <a href="javascript:;" class='pull-right icon_logout'><span class='glyphicon glyphicon-share'></span></a>
         </div>
         <div class="min_box">
-            <ol class="breadcrumb">
+            <ol class="breadcrumb mb_30">
                 <li><a href="index.html">管理系统</a></li>
                 <li class="active">首页</li>
             </ol>
             <!-- 主体内容部分 -->
             <div class="lt_mian_content">
-
+                <div class="charts_left pull-left">
+                    <div class="charts_bar" width="100%" ></div>
+                </div>
+                <div class="charts_right pull-right">
+                    <div class="charts_pics" width="100%" ></div>
+                </div>
             </div>
         </div>
     </div>
@@ -76,8 +81,7 @@
                 </div>
                 <div class="modal-body">
                     <p class='modal_info text-danger'>
-                        <span class='glyphicon glyphicon-info-sign'></span>
-                        您确定要退出后台管理系统吗？
+                        <span class='glyphicon glyphicon-info-sign'></span> 您确定要退出后台管理系统吗？
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -92,6 +96,7 @@
     <script src='lib/jquery/jquery.min.js'></script>
     <script src='lib/bootstrap/js/bootstrap.min.js'></script>
     <script src='lib/nprogress/nprogress.js'></script>
+    <script src='lib/echarts/echarts.min.js'></script>
     <script src='js/common.js'></script>
     <script src='js/index.js'></script>
 </body>
