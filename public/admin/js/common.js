@@ -40,9 +40,9 @@ $(function () {
 
     // 退出功能
     $('.lt_main .glyphicon-share').on('click', function () {
-        $('.modal').modal('show')
+        $('#logout_modal').modal('show')
         $('.btn_logout').off().on('click', function () {
-            console.log(123);
+            $('#logout_modal').modal('hide')
             $.ajax({
                 type: 'get',
                 url: '/employee/employeeLogout',

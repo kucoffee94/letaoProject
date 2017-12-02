@@ -19,7 +19,8 @@ $(function () {
       type:'get',
       url:'/employee/checkRootLogin',
       success:function(data){
-        if(data.error == 404){
+        // console.log(data);
+        if(data.error == 400){
           location.href = 'login.html';
         }
       }

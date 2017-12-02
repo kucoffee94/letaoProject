@@ -7,6 +7,7 @@
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>系统管理-一级分类</title>
     <link rel="stylesheet" href="lib/bootstrap/css/bootstrap.css">
+    <link rel="stylesheet" href="lib/bootstrap-validator/css/bootstrapValidator.css">
     <link rel="stylesheet" href="lib/nprogress/nprogress.css">
     <link rel="stylesheet" href="css/common.css">
 
@@ -57,16 +58,36 @@
                 <li><a href="javascript:;">分类管理</a></li>
                 <li class="active">一级分类</li>
             </ol>
+
+            <button type="button" class="btn btn-default add_cate1 mb_20">添加分类</button>
             <!-- 主体内容部分 -->
             <div class="lt_mian_content">
+                <table class='table table-bordered table-hover'>
+                    <thead>
+                        <tr>
+                            <td width='20%'>序号</td>
+                            <td width='80%'>分类名称</td>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <!-- 挖个坑 -->
+                    </tbody>
+                </table>
 
+                <div class="paginator">
+                    <nav aria-label="...">
+                        <ul class="pagination">
+                            <li class="disabled"><a href="#" aria-label="Previous"><span aria-hidden="true">&laquo;</span></a></li>
+                            <li class="active"><a href="#">1 <span class="sr-only">(current)</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
             </div>
         </div>
     </div>
 
-
     <!-- 退出登录的模态框 -->
-    <div class="modal fade" tabindex="-1">
+    <div class="modal fade" tabindex="-1" id='logout_modal'>
         <div class="modal-dialog modal-sm">
             <div class="modal-content">
                 <div class="modal-header">
@@ -77,8 +98,7 @@
                 </div>
                 <div class="modal-body">
                     <p class='modal_info text-danger'>
-                        <span class='glyphicon glyphicon-info-sign'></span>
-                        您确定要退出后台管理系统吗？
+                        <span class='glyphicon glyphicon-info-sign'></span> 您确定要退出后台管理系统吗？
                     </p>
                 </div>
                 <div class="modal-footer">
@@ -89,11 +109,52 @@
         </div>
     </div>
 
+    <!-- 添加一级分类模态框 -->
+    <div class="modal fade" tabindex="-1" id='add_cate1'>
+        <div class="modal-dialog modal-sm">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal">
+                    <span>&times;</span>
+                </button>
+                    <h4 class="modal-title">添加分类</h4>
+                </div>
+                <form>
+                    <div class="modal-body">
+                        <div class="form-group">
+                            <input type="text" class="form-control" autocomplete="off" name="categoryName" placeholder="请输入一级分类名称">
+                        </div>
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                        <button type="submit" class="btn btn-primary btn_logout">添加</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+    <!-- 表格内容模板 -->
+    <script type='text/html' id='tpl'>
+        {{ each rows v i }}
+        <tr>
+            <td>{{ (page-1)*size+i+1 }}</td>
+            <td>{{ v.categoryName}}</td>
+        </tr>
+        {{ /each }}
+    </script>
+
 
     <script src='lib/jquery/jquery.min.js'></script>
     <script src='lib/bootstrap/js/bootstrap.min.js'></script>
+    <script src='lib/bootstrap-validator/js/bootstrapValidator.js'></script>
     <script src='lib/nprogress/nprogress.js'></script>
+    <script src='lib/artTemplate/template-web.js'></script>
+    <script src='lib/bootstrap-paginator/bootstrap-paginator.js'></script>
     <script src='js/common.js'></script>
+    <script src='js/first.js'></script>
+
+    </a>
 </body>
 
 </html>
