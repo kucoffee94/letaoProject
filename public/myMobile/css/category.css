@@ -1,0 +1,46 @@
+/* 分类页左侧导航 */
+.lt_left{
+  width: 90px;
+  height: 100%;
+  float: left;
+}
+.lt_left ul{
+  width: 90px;
+}
+.lt_left li>a{
+  display: block;
+  width: 90px;
+  height: 50px;
+  line-height: 50px;
+  border-bottom: 1px solid red;
+  border-right: 1px solid red;
+  text-align: center;
+  background: pink;
+}
+.lt_left li.now>a{
+  background: #fff;
+  border-right: 1px solid transparent;
+}
+
+.lt_right{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.lt_right ul{
+  padding: 10px;
+}
+.lt_right li{
+  width: 33.33%;
+  float: left;
+  text-align: center;
+}
+.lt_right li img{
+  width: 62px;
+  height: 62px;
+  display: block;
+}
+.lt_right li p{
+  line-height: 2;
+  margin: 0;
+}

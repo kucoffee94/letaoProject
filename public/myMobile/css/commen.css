@@ -1,0 +1,125 @@
+@charset 'UTF-8';
+html,body{
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  margin: 0 auto;
+}
+*{
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+img{
+  width: 100%;
+  display: block;
+}
+
+/* 公共样式部分 */
+.container{
+  height: 100%;
+  max-width: 640px;
+  min-width: 320px;
+  position: relative;
+  padding-top: 45px;
+  padding-bottom: 50px;
+}
+.lt_top{
+  height: 45px;
+  width: 100%;
+  background: #069;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.ico_left,.ico_right{
+  width: 45px;
+  height: 45px;
+  line-height: 45px;
+  text-align: center;
+  font-size: 18px;
+  display: inline-block;
+  color: #fff;
+}
+.ico_left{
+  float: left;
+}
+.ico_right{
+  float: right;
+}
+.lt_top>h4{
+  text-align: center;
+  color: #fff;
+  line-height: 45px;
+  margin: 0;
+  font-weight: 400;
+}
+.lt_bottom{
+  height: 50px;
+  width: 100%;
+  background: #069;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.lt_bottom li{
+  float: left;
+  width: 25%;
+  height: 50px;
+  text-align: center;
+  padding-top: 8px;
+}
+.lt_bottom li>a{
+  width: 100%;
+  height: 100%;
+  display: block;
+  color: #fff;
+}
+.lt_bottom li>a>p{
+  margin: 0;
+  color: #fff;
+  font-size: 12px;
+}
+.lt_bottom li.now>a{
+  color: darkorange;
+}
+.lt_bottom li.now p{
+  color: darkorange;
+}
+
+.lt_main{
+  height: 100%;
+  width: 100%;
+  background: #fff;
+  overflow: hidden;
+  position: relative;
+}
+
+/* 商品 */
+.product{
+  padding: 0 10px;
+}
+.product a{
+  display: block;
+  width: 48%;
+  border: 1px solid #ccc; 
+  float: left; 
+  padding: 10px;
+  text-align: center;
+  margin-top: 10px;
+}
+.product a:nth-child(2n+1){
+  margin-right: 4%;
+}
+.product a>.pro_info{
+  font-size: 12px;
+}
+.product .price{
+  color: red;
+  font-size: 12px;
+}
+.product .oldPrice{
+  text-decoration: line-through;
+  font-size: 12px;
+  color: #333;
+}
