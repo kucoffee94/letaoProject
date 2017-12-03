@@ -48,6 +48,7 @@ img{
   float: right;
 }
 .lt_top>h4{
+  padding: 0 45px;
   text-align: center;
   color: #fff;
   line-height: 45px;
@@ -122,4 +123,44 @@ img{
   text-decoration: line-through;
   font-size: 12px;
   color: #333;
+}
+/* 搜索框 */
+.lt_search{
+  height: 54px;
+  padding: 10px;
+  position: relative;
+}
+.lt_search>input{
+  height: 34px;
+  line-height: 34px;
+  margin: 0;
+  padding: 0;
+  padding-left: 10px;
+  border-radius: 4px;
+  font-size: 12px;
+}
+.lt_search>.btn_search{
+  position: absolute;
+  right: 10px;
+  top: 10px;
+  border-radius: 0 4px 4px 0;
+}
+/* 加载动画 */
+.lt_loadAnimate{
+  width: 40px;
+  height: 40px;
+  border: 3px solid #069;
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  top: 200px;
+  animation: loading 1s infinite ease-in-out;
+}
+@keyframes loading{
+  from{
+    transform: translate(-50%) rotate(0deg);
+  }
+  to{
+    transform: translate(-50%) rotate(360deg);
+  }
 }

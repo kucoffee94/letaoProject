@@ -1,0 +1,41 @@
+@charset 'UTF-8';
+.lt_cart{
+  background: #fefefe;
+  border-top: 1px solid red;
+  padding: 0 10px;
+  padding-top: 10px;
+}
+.proTitle,.proPrice,
+.proSize,.proNum,
+.proDesc{
+  padding: 10px;
+  border-top: 1px solid #ccc;
+}
+.proTitle{
+  font-size: 14px;
+}
+.proPrice>.price{
+  color: red;
+}
+.proPrice>.oldPrice{
+  color: #999;
+  text-decoration: line-through;
+  font-size: 12px;
+}
+.proSize>span{
+  border: 1px solid #ccc;
+  padding: 5px;
+  font-size: 12px;
+  line-height: 30px;
+}
+.proSize>span.now{
+  background: #069;
+  color: #fff;
+}
+.proNum .nums{
+  font-size: 12px;
+  color: #999;
+}
+.proDesc>span{
+  font-size: 14px;
+}

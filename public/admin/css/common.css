@@ -31,22 +31,23 @@ text-decoration: none;
 }
 
 /* 后台首页部分 */
-/* 做猜测导航 */
+/* 左侧导航 */
 .lt_aside{
     width: 180px;
     height: 100%;
     background: #222d32;
-    position: absolute;
+    position: fixed;
     top: 0;
     left: 0;
     transition: all 1s;
+    z-index: 100; 
 }
 .lt_aside.now{
     left: -180px;
 }
 .lt_title{
     height: 50px;
-    background:#367fa9; 
+    background:#367fa9;
 }
 .lt_title a{
     display: block;
@@ -105,18 +106,28 @@ text-decoration: none;
 /* 右侧主体部分 */
 .lt_main{
     height:100%;
-    margin-left: 180px;
+    padding-left: 180px;
     transition: all 1s;
+    padding-top: 70px;
 }
 .lt_main.now{
-    margin-left: 0;
+    padding-left: 0;
 }
 .lt_main_top{
     height: 50px;
     background: #3c8dbc;
     line-height: 50px;
-    padding: 0 10px;
+    padding: 0 20px;
     margin-bottom: 30px;
+    padding-left: 200px;
+    position: fixed;
+    top: 0;
+    width: 100%;
+    left: 0;
+    transition: all 1s;
+}
+.lt_main.now .lt_main_top{
+    padding-left: 20px;
 }
 .lt_main_top a{
     color: #fff;

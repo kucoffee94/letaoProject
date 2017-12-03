@@ -1,0 +1,21 @@
+@charset 'UTF-8';
+.lt_history{
+  padding: 10px;
+  font-size: 12px;
+  position: relative;
+}
+.lt_history ul{
+  border: 1px dashed red;
+}
+.lt_history ul>li{
+  border-bottom: 1px dashed red;
+  padding-left: 10px;
+  height: 30px;
+  line-height: 30px;
+}
+.lt_history ul>li:last-child{
+  border-bottom: none;
+}
+.lt_history ul>li>.mui-icon{
+  line-height: 30px;
+}

@@ -1,7 +1,7 @@
 $(function () {
   // 页面初始化数据渲染
   var currentPage = 1;
-  var pageSize = 3;
+  var pageSize = 10;
   var render = function () {
     $.ajax({
       type: 'get',
