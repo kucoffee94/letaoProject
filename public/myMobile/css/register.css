@@ -1,0 +1,27 @@
+
+.lt_main{
+  padding: 10px;
+}
+.lt_main .inp_code{
+  width: 65%;
+}
+.lt_main .get_code{
+  width: 30%;
+  text-align: center;
+  padding: 0 10px;
+  height: 40px;
+  line-height: 40px;
+}
+.lt_main .btn_regist{
+  width: 100%;
+  height: 40px;
+  line-height: 40px;
+  padding: 0;
+}
+.tips.now{
+  color:#000;
+}
+.lt_main .btn_regist.disabled{
+  background: rgba(0,66,99,0.3);
+  border-color: rgba(0,66,99,0.3);
+}

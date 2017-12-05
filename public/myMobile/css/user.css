@@ -1,0 +1,7 @@
+.btn_logout{
+  width: 100%;
+  padding:10px;
+}
+.btn_logout>a{
+  width: 100%;
+}

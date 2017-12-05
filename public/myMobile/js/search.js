@@ -80,11 +80,4 @@ $(function () {
     location.href = 'productList.html?key='+ text;
   });
 
-
-
-
-
-
-
-
 });
