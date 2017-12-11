@@ -1,0 +1,46 @@
+/* 侧边栏样式 */
+.lt_main aside{
+  width: 90px;
+  height: 100%;
+  position: relative;
+  float: left;
+}
+.lt_main aside li{
+  text-align: center;
+  line-height: 50px;
+}
+.lt_main aside li>a{
+  background:#B8EAFC;
+  border-bottom: 1px solid pink;
+  border-right: 1px solid pink;
+  display: block;
+}
+.lt_main aside li a.now{
+  background: #fff;
+  border-right: 1px solid transparent;
+}
+/* 右边品牌详情 */
+.lt_main .main{
+  overflow: hidden;
+  position: relative;
+  height: 100%;
+}
+.lt_main .main ul{
+  /* padding: 10px; */
+}
+.lt_main .main ul>li{
+  float: left;
+  width: 33.3%;
+  padding: 8px;
+}
+.lt_main .main ul>li img{
+  width: 58px;
+  height: 58px;
+  margin: 0 auto;
+}
+
+.lt_main .main ul>li p{
+  text-align: center;
+  font-size: 12px;
+  line-height: 2;
+}

@@ -136,5 +136,23 @@ a:link,a:hover,a:visited,a:active{
   text-align: right;
 }
 
+/* 二级分类页模态框 */
+.img_box{
+  position: relative;
+  width: 85px;
+  height: 35px;
+}
+.img_file{
+  position: absolute;
+  top:0;
+  left: 0;
+  width: 100px;
+  height: 100%;
+  opacity: 0;
+}
+.img{
+  width: 100px;
+  height: 100px;
+}
 
 

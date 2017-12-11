@@ -1,0 +1,32 @@
+
+
+/* 历史记录部分样式 */
+.history{
+  padding: 10px;
+}
+.history .his_top{
+  line-height: 30px;
+  height: 30px;
+}
+.history .his_top .btn_empty{
+  height: 30px;
+  line-height: 30px;
+}
+.history ul{
+  border: 1px dotted red;
+}
+.history li{
+  height: 30px;
+  line-height: 30px;
+  border-bottom: 1px dotted red;
+  padding-left:10px;
+  font-size: 15px;
+}
+.history li:last-child{
+  border-bottom: none;
+}
+.history li .right{
+  float: right;
+  line-height: 30px;
+  color:#999;
+}

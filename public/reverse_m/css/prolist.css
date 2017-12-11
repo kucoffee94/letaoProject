@@ -1,0 +1,22 @@
+/* 设置导航栏样式 */
+.sort_nav{
+  height: 30px;
+  line-height: 30px;
+  text-align: center;
+  background: #eee;
+  padding: 0 10px;
+}
+.sort_nav li{
+  width: 25%;
+  float: left;
+}
+.sort_nav li a{
+  font-size: 12px;
+  color: #666;
+}
+.sort_nav li a>.ico{
+  font-size: 12px;
+}
+.sort_nav li a.now{
+  color: darkorange;
+}
